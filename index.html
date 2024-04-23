@@ -11,18 +11,10 @@
     <p><em>Thank you for taking the time to fill out this form</em></p>
     <form id="survey-form" method="post" action="https://register-demo.freecodecamp.org">
         <fieldset>
+            <legend>Customer Info</legend>
             <label id="name-label" for="name">Name <input id="name" name="name" type="text" placeholder="Enter your name" required /></label>
             <label id="email-label" for="email">E-Mail <input id="email" name="email" type="email" placeholder="Enter your e-mail" required /></label>
-            <label id="number-label" for="number">Age <input id="number" name="number" type="number" min="18" max="120" placeholder="optional"</label>
-            <label id="dropdown" for="satisfaction">Overall Satisfaction
-                <select id="satisfaction" name="satisfaction">
-                    <option value="">(select one)</option>
-                    <option value="0">Highly Dissatisfied</option>
-                    <option value="1">Dissatisfied</option>
-                    <option value="2">Not Highly Satisfied</option>
-                    <option value="3">Highly Satisfied</option>
-                </select>
-            </label>
+            <label id="number-label" for="number">Age (optional) <input id="number" name="number" type="number" min="18" max="120" placeholder="Age"></label>
         </fieldset>
         <fieldset>
             <legend>Select Your Order Point</legend>
@@ -30,7 +22,29 @@
             <label id="app-label" for="app"><input id="app" name="order-point" type="radio" /> With the mobile app</label>
             <label id="kiosk-label" for="kiosk"><input id="kiosk" name="order-point" type="radio" /> With a kiosk</label>
         </fieldset>
-        <fieldset></fieldset>
+        <fieldset>
+            <legend>Items Ordered (Choose all that apply)</legend>
+            <label id="hamburger-label" for="hamburger"><input id=hamburger type="checkbox" value="hamburger"> Hamburger</label>
+            <label id="chicken-label" for="chicken"><input id=chicken type="checkbox" value="chicken"> Chicken Sandwich</label>
+            <label id="mac-label" for="mac"><input id=mac type="checkbox" value="mac"> Slam Mac</label>
+            <label id="nugget-label" for="nugget"><input id=nugget type="checkbox" value="nugget"> Chicken Nuggets</label>
+            <label id="fries-label" for="fries"><input id=fries type="checkbox" value="fries"> French Fries</label>
+            <label id="other-label" for="other"><input id=other type="checkbox" value="other"> Other</label>
+        </fieldset>
+        <fieldset>
+            <label id="dropdown" for="satisfaction">Overall Satisfaction
+                <select id="satisfaction" name="satisfaction">
+                    <option value="">(select rating)</option>
+                    <option value="0">Highly Dissatisfied</option>
+                    <option value="1">Dissatisfied</option>
+                    <option value="2">Not Highly Satisfied</option>
+                    <option value="3">Highly Satisfied</option>
+                </select>
+            </label>
+            <label id="comment-label" for="comments">What can we do to improve the experience?
+                <textarea id="comments" name="comments" rows="3" cols="30" placeholder="I wish that..."></textarea>
+            </label>
+        </fieldset>
         <input type="submit" value="Submit" />
     </form>
   </body>

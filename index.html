@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--Builds a simple form for feedback on a customer visit to a QSR style restaurant. Built by Bryce Poindexter 4-22-2024-->
 <html lang="en">
   <head>
     <title>Survey Form</title>
@@ -8,7 +9,7 @@
   </head>
   <body>
     <h1 id="title">Visit Satisfaction Survey</h1>
-    <p><em>Thank you for taking the time to fill out this form</em></p>
+    <p id="description"><em>Thank you for taking the time to fill out this form</em></p>
     <form id="survey-form" method="post" action="https://register-demo.freecodecamp.org">
         <fieldset>
             <legend>Customer Info</legend>
@@ -18,22 +19,22 @@
         </fieldset>
         <fieldset>
             <legend>Select Your Order Point</legend>
-            <label id="employee-label" for="employee"><input id="employee" name="order-point" type="radio" checked /> With an employee</label>
-            <label id="app-label" for="app"><input id="app" name="order-point" type="radio" /> With the mobile app</label>
-            <label id="kiosk-label" for="kiosk"><input id="kiosk" name="order-point" type="radio" /> With a kiosk</label>
+            <label id="employee-label" for="employee"><input class="inline" id="employee" name="order-point" type="radio" value="employee" /> With an employee at the restaurant</label>
+            <label id="app-label" for="app"><input class="inline" id="app" name="order-point" type="radio" value="app" /> Through the mobile app</label>
+            <label id="kiosk-label" for="kiosk"><input class="inline" id="kiosk" name="order-point" type="radio" value="kiosk" /> At a self-service kiosk</label>
         </fieldset>
         <fieldset>
             <legend>Items Ordered (Choose all that apply)</legend>
-            <label id="hamburger-label" for="hamburger"><input id=hamburger type="checkbox" value="hamburger"> Hamburger</label>
-            <label id="chicken-label" for="chicken"><input id=chicken type="checkbox" value="chicken"> Chicken Sandwich</label>
-            <label id="mac-label" for="mac"><input id=mac type="checkbox" value="mac"> Slam Mac</label>
-            <label id="nugget-label" for="nugget"><input id=nugget type="checkbox" value="nugget"> Chicken Nuggets</label>
-            <label id="fries-label" for="fries"><input id=fries type="checkbox" value="fries"> French Fries</label>
-            <label id="other-label" for="other"><input id=other type="checkbox" value="other"> Other</label>
+            <label id="hamburger-label" for="hamburger"><input class="inline" id=hamburger type="checkbox" value="hamburger"> Hamburger</label>
+            <label id="chicken-label" for="chicken"><input class="inline" id=chicken type="checkbox" value="chicken"> Chicken Sandwich</label>
+            <label id="mac-label" for="mac"><input class="inline" id=mac type="checkbox" value="mac"> Slam Mac</label>
+            <label id="nugget-label" for="nugget"><input class="inline" id=nugget type="checkbox" value="nugget"> Chicken Nuggets</label>
+            <label id="fries-label" for="fries"><input class="inline" id=fries type="checkbox" value="fries"> French Fries</label>
+            <label id="other-label" for="other"><input class="inline" id=other type="checkbox" value="other"> Other</label>
         </fieldset>
         <fieldset>
-            <label id="dropdown" for="satisfaction">Overall Satisfaction
-                <select id="satisfaction" name="satisfaction">
+            <label id="dropdown-label" for="dropdown">Overall Satisfaction
+                <select id="dropdown" name="dropdown">
                     <option value="">(select rating)</option>
                     <option value="0">Highly Dissatisfied</option>
                     <option value="1">Dissatisfied</option>
@@ -45,7 +46,7 @@
                 <textarea id="comments" name="comments" rows="3" cols="30" placeholder="I wish that..."></textarea>
             </label>
         </fieldset>
-        <input type="submit" value="Submit" />
+        <input id="submit" type="submit" value="Submit" />
     </form>
   </body>
 </html>

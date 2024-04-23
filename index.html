@@ -4,6 +4,7 @@
     <title>Survey Form</title>
     <link rel="stylesheet" href="styles.css">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
     <h1 id="title">Visit Satisfaction Survey</h1>
@@ -23,8 +24,14 @@
                 </select>
             </label>
         </fieldset>
+        <fieldset>
+            <legend>Select Your Order Point</legend>
+            <label id="employee-label" for="employee"><input id="employee" name="order-point" type="radio" checked /> With an employee</label>
+            <label id="app-label" for="app"><input id="app" name="order-point" type="radio" /> With the mobile app</label>
+            <label id="kiosk-label" for="kiosk"><input id="kiosk" name="order-point" type="radio" /> With a kiosk</label>
+        </fieldset>
         <fieldset></fieldset>
-        <fieldset></fieldset>
+        <input type="submit" value="Submit" />
     </form>
   </body>
 </html>
